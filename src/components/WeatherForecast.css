@@ -1,0 +1,15 @@
+.WeatherForecast{
+  width: 110px;
+  margin: 15px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.Weather-Picture{
+  width: 50px;
+  float: right;
+}
+
+.margin{
+  margin: 5px;
+}

@@ -1,0 +1,19 @@
+
+.Weather-Data{
+  background-color: white;
+  border-radius: 10px;
+  position: absolute;
+  width: 150px;
+  top: 50px;
+  left: 300px;
+}
+
+.Weather-Symbol{
+ width: 50px;
+ float: right;
+
+}
+
+.margin{
+ margin: 5px;
+}
