@@ -18,7 +18,7 @@ constructor(props){
      <div className="WeatherBundle">
      <BackgroundCity ImgURL={this.props.ImgURL} ImgIsLoaded={this.props.ImgIsLoaded}/>
      <WeatherToday TodayTemp={this.props.TodayTemp} TodaySymbol={this.props.TodaySymbol}/>
-     <WeatherForecastContainer />
+     <WeatherForecastContainer WeatherJson={this.props.WeatherJson}/>
      </div>
 
      );

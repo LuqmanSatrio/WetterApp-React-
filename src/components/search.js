@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './css/search.css';
 import WeatherBundle from './weatherbundle'
 import Sunshine from './pictures/sunshine.png'
+import initialJson from './initialJson.json'
 
 var API_KEY = "832b52041e8dc7d9855007b87e8ef873"
 
@@ -12,9 +13,10 @@ class Search extends Component {
     this.state = {
       term: 'Hamburg',
       ImgURL : "https://pixabay.com/get/ea34b30e28f4083ed1584d05fb1d4f91e57fe7dc11ac104496f4c779a5e9b5ba_1280.jpg",
+      WeatherJson: initialJson,
       TodayTemp: "290",
       TodaySymbolLink: Sunshine,
-      ImgIsLoaded: true};
+      ImgIsLoaded: false};
     this.onButtonClicked = this.onButtonClicked.bind(this)
   }
 
@@ -44,7 +46,7 @@ class Search extends Component {
                         </div>
 
                     </div>
-                    <WeatherBundle ImgURL={this.state.ImgURL} ImgIsLoaded={this.state.ImgIsLoaded} TodayTemp={this.state.TodayTemp} TodaySymbol={this.state.TodaySymbolLink}/>
+                    <WeatherBundle ImgURL={this.state.ImgURL} ImgIsLoaded={this.state.ImgIsLoaded} WeatherJson ={this.state.WeatherJson} TodayTemp={this.state.TodayTemp} TodaySymbol={this.state.TodaySymbolLink}/>
 
       </div>
     );
@@ -57,7 +59,8 @@ class Search extends Component {
       .then(
         (result) => {
           this.setState({
-            ImgURL: result.hits[0].largeImageURL
+            ImgURL: result.hits[0].largeImageURL,
+            ImgIsLoaded: true,
           })
           })
 
@@ -67,6 +70,7 @@ class Search extends Component {
         (result) => {
 
           this.setState({
+            WeatherJson: result,
             TodayTemp :result.list[0].main.temp,
             TodaySymbolLink: "http://openweathermap.org/img/w/" + result.list[0].weather[0].icon +".png"
           })
