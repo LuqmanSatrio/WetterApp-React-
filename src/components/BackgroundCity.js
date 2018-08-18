@@ -8,7 +8,6 @@ class BackgroundCity extends Component {
   this.state = {
     error: null,
     isLoaded: this.props.ImgIsLoaded,
-    ImgURL: this.props.ImgURL
   };
 }
 
@@ -25,14 +24,15 @@ render() {
 
     return <div><p>Loading...</p></div>;
   } else {
-    console.log(this.state.ImgURL)
+
 
     return (
       <div>
-      <img src={this.state.ImgURL} className="BackgroundCityImage"/>
+      <img src={this.props.ImgURL} className="BackgroundCityImage"/>
       </div>
 
       );
+
   }
 }
 

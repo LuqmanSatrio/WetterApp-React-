@@ -12,11 +12,12 @@ constructor(props){
 }
 
   render() {
+    console.log(this.props.TodaySymbol);
 
     return (
      <div className="WeatherBundle">
      <BackgroundCity ImgURL={this.props.ImgURL} ImgIsLoaded={this.props.ImgIsLoaded}/>
-     <WeatherToday />
+     <WeatherToday TodayTemp={this.props.TodayTemp} TodaySymbol={this.props.TodaySymbol}/>
      <WeatherForecastContainer />
      </div>
 

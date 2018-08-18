@@ -4,7 +4,7 @@ import './index.css';
 import Search from './components/search';
 import registerServiceWorker from './registerServiceWorker';
 
-const API_KEY = "9768598-b7b5649d7396f5ca7fdc58676"
+const API_KEY = "832b52041e8dc7d9855007b87e8ef873"
 
 const element = <div> <Search/> </div>;
 
