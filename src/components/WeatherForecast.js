@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import sunshine from './sunshine.png'
-import './WeatherForecast.css'
+import sunshine from './pictures/sunshine.png'
+import './css/WeatherForecast.css'
 
 class WeatherForecast extends Component {
   render() {

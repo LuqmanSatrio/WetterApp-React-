@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import WeatherForecast from './WeatherForecast'
-import './WeatheForecastContainer.css'
+import './css/WeatheForecastContainer.css'
 
 class WeatherForecastContainer extends Component {
   render() {

@@ -1,14 +1,19 @@
 import React, { Component } from 'react';
-import './search.css';
+import './css/search.css';
+import WeatherBundle from './weatherbundle'
 
 class Search extends Component {
    constructor(props) {
     super(props);
-    this.state = {term: 'input'};
+    this.state = {
+      term: 'input',
+      ImgURL : "https://pixabay.com/get/e133b80d28fc1c22d2524518b7454190eb72ebdd04b0144291f5c879a6ebb3_1280.jpg",
+      ImgIsLoaded: false};
     this.onButtonClicked = this.onButtonClicked.bind(this)
   }
 
   render() {
+
     return (
       <div >
            <br/>
@@ -33,6 +38,7 @@ class Search extends Component {
                         </div>
 
                     </div>
+                    <WeatherBundle ImgURL={this.state.ImgURL} ImgIsLoaded={this.state.ImgIsLoaded}/>
 
       </div>
     );
@@ -40,9 +46,18 @@ class Search extends Component {
 
 
   onButtonClicked(event){
-    console.log(this.state.term);
+    fetch("https://pixabay.com/api/?key=9768598-b7b5649d7396f5ca7fdc58676&q=" + this.state.term +"&image_type=photo&pretty=true")
+      .then(res => res.json())
+      .then(
+        (result) => {
+          this.setState({
+            ImgURL: result.hits[0].largeImageURL,
+            ImgIsLoaded: true
+          })
+          console.log(this.state.ImgURL)
+          })}
   }
-}
+
 
 
 export default Search;

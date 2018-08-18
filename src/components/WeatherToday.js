@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import './WeatherToday.css'
-import Sunshine from './sunshine.png'
+import './css/WeatherToday.css'
+import Sunshine from './pictures/sunshine.png'
 
 
 class WeatherToday extends Component {
