@@ -20,6 +20,7 @@ You have to put in the location in english and click the search button instead o
 The App still has many buggs that's not fixed yet.
 The following still needs to be fixed:
 
-1. If you type in a term which has no picture in the database the following will appear: (https://github.com/LuqmanSatrio/WetterApp-React-/Buggs-Screenshot/unhandledPictureError.png)
+1. If you type in a term which has no picture in the database the following will appear:
+![alt text](https://github.com/LuqmanSatrio/WetterApp-React-/Buggs-Screenshot/unhandledPictureError.png)
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
