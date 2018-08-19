@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './css/search.css';
 import WeatherBundle from './weatherbundle'
 import Sunshine from './pictures/sunshine.png'
+import StartPicture from './pictures/example_city.jpg'
 import initialJson from './initialJson.json'
 
 var API_KEY = "832b52041e8dc7d9855007b87e8ef873"
@@ -12,7 +13,7 @@ class Search extends Component {
     super(props);
     this.state = {
       term: 'Hamburg',
-      ImgURL : "https://pixabay.com/get/ea34b30e28f4083ed1584d05fb1d4f91e57fe7dc11ac104496f4c779a5e9b5ba_1280.jpg",
+      ImgURL : StartPicture,
       WeatherJson: initialJson,
       TodayTemp: "290",
       TodaySymbolLink: Sunshine,
